@@ -21,9 +21,9 @@ PRO-GET is an app designed to connect users with professionals such as plumbers,
 
 - **Backend:** Flask, Flask-JWT-Extended, Flask-Mail, Flask-CORS, SQLAlchemy
 - **Frontend:** React.js, React Router, React Toastify, Tailwind CSS
-- **Database:** SQLite
+- **Database:** PostgreSQL Server
 - **Authentication:** JWT (JSON Web Tokens)
-- **Deployment:** Render (Backend), Netlify (Frontend)
+- **Deployment:** Render (Backend), Vercel (Frontend)
 
 ## Project Setup
 
