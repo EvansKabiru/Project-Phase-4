@@ -13,7 +13,7 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch("http://localhost:5000/api/users", {
+      const res = await fetch("https://project-phase-4-1.onrender.com/api/users", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include", // Allows session cookies if needed

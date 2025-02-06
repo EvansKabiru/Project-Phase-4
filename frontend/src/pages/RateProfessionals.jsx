@@ -18,7 +18,7 @@ const RateProfessionals = () => {
     }
 
     try {
-      const res = await fetch(`/professionals/${id}/rate`, {
+      const res = await fetch(`https://project-phase-4-1.onrender.com/professionals/${id}/rate`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

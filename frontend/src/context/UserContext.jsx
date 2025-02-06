@@ -22,7 +22,7 @@ export const UserProvider = ({ children }) => {
         }
 
         try {
-            const response = await fetch("http://localhost:5000/api/current_user", {  // Ensure API URL is correct
+            const response = await fetch("https://project-phase-4-1.onrender.com/api/current_user", {  // Ensure API URL is correct
                 method: "GET",
                 headers: { 
                     "Content-Type": "application/json", 
@@ -60,7 +60,7 @@ export const UserProvider = ({ children }) => {
     const login = async (email, password) => {
         toast.loading("Logging you in...");
         try {
-            const response = await fetch("http://localhost:5000/api/auth/login", {
+            const response = await fetch("https://project-phase-4-1.onrender.com/api/auth/login", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email, password }),
@@ -93,7 +93,7 @@ export const UserProvider = ({ children }) => {
     const logout = async () => {
         toast.loading("Logging out...");
         try {
-            const response = await fetch("http://localhost:5000/api/logout", {
+            const response = await fetch("https://project-phase-4-1.onrender.com/api/logout", {
                 method: "DELETE",
                 headers: { "Content-Type": "application/json", Authorization: `Bearer ${authToken}` },
             });

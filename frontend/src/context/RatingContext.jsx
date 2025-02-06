@@ -11,7 +11,7 @@ export const RatingProvider = ({ children }) => {
     // FETCH ALL RATINGS
     useEffect(() => { fetchRatings(); }, []);
     const fetchRatings = () => {
-        fetch("http://localhost:5000/ratings")
+        fetch("https://project-phase-4-1.onrender.com/ratings")
         .then((res) => res.json())
         .then((data) => {
             setRatings(data);
@@ -30,7 +30,7 @@ export const RatingProvider = ({ children }) => {
             return;
         }
 
-        fetch("http://localhost:5000/ratings", {
+        fetch("https://project-phase-4-1.onrender.com/ratings", {
             method: "POST",
             headers: { 
                 "Content-Type": "application/json",
@@ -55,7 +55,7 @@ export const RatingProvider = ({ children }) => {
             return;
         }
 
-        fetch(`http://localhost:5000/ratings/${ratingId}`, {
+        fetch(`https://project-phase-4-1.onrender.com/ratings/${ratingId}`, {
             method: "PUT",
             headers: { 
                 "Content-Type": "application/json",
@@ -80,7 +80,7 @@ export const RatingProvider = ({ children }) => {
             return;
         }
 
-        fetch(`http://localhost:5000/ratings/${ratingId}`, {
+        fetch(`https://project-phase-4-1.onrender.com/ratings/${ratingId}`, {
             method: "DELETE",
             headers: { 
                 "Content-Type": "application/json",

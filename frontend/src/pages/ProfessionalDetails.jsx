@@ -10,7 +10,7 @@ const ProfessionalDetails = () => {
   useEffect(() => {
     const fetchProfessional = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/professionals/${id}`);
+        const res = await fetch(`https://project-phase-4-1.onrender.com/professionals/${id}`);
 
         if (!res.ok) {
           const errorText = await res.text(); // Get error response as text

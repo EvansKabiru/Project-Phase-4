@@ -10,7 +10,7 @@ export const ProfessionalProvider = ({ children }) => {
     // FETCH ALL PROFESSIONALS
     useEffect(() => { fetchProfessionals(); }, []);
     const fetchProfessionals = () => {
-        fetch("http://localhost:5000/professionals")
+        fetch("https://project-phase-4-1.onrender.com/professionals")
         .then((res) => res.json())
         .then((data) => {
             setProfessionals(data);
@@ -25,7 +25,7 @@ export const ProfessionalProvider = ({ children }) => {
     // ADD PROFESSIONAL
     const addProfessional = (professionalData) => {
         toast.loading("Adding professional...");
-        fetch("http://localhost:5000/professionals", {
+        fetch("https://project-phase-4-1.onrender.com/professionals", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(professionalData)
@@ -45,7 +45,7 @@ export const ProfessionalProvider = ({ children }) => {
     // UPDATE PROFESSIONAL
     const updateProfessional = (professionalId, updatedData) => {
         toast.loading("Updating professional...");
-        fetch(`http://localhost:5000/professionals/${professionalId}`, {
+        fetch(`https://project-phase-4-1.onrender.com/professionals/${professionalId}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(updatedData)
@@ -65,7 +65,7 @@ export const ProfessionalProvider = ({ children }) => {
     // DELETE PROFESSIONAL
     const deleteProfessional = (professionalId) => {
         toast.loading("Deleting professional...");
-        fetch(`http://localhost:5000/professionals/${professionalId}`, {
+        fetch(`https://project-phase-4-1.onrender.com/professionals/${professionalId}`, {
             method: "DELETE",
             headers: { "Content-Type": "application/json" }
         })

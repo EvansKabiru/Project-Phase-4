@@ -9,7 +9,7 @@ const Ratings = () => {
   useEffect(() => {
     const fetchRatings = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/professionals/${id}/ratings`, {
+        const res = await fetch(`https://project-phase-4-1.onrender.com/professionals/${id}/ratings`, {
           headers: {
             "Content-Type": "application/json",
             "Authorization": `Bearer ${localStorage.getItem("token")}` // If authentication is required
