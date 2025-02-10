@@ -10,7 +10,7 @@ from models import db, TokenBlocklist  # Import database and token blocklist mod
 app = Flask(__name__)
 
 # Enable CORS
-CORS(app, supports_credentials=True, origins=["http://localhost:5173"])
+CORS(app, supports_credentials=True, origins=["https://pro-get.vercel.app"])
 
 # Database Configuration (Replace with actual credentials)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://progetdb_user:0JMRlA8d8F04QUWgHViSW770Cp0CPQMN@dpg-cui6m1ggph6c73eh4nrg-a.oregon-postgres.render.com/progetdb'
